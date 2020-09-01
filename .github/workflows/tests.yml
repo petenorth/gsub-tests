@@ -16,5 +16,5 @@ jobs:
         ruby-version: ${{ matrix.ruby }}
     - run: ruby -e 'sentence = "This is a sample sentence."; puts sentence.gsub(/a/, "")'
     - run: ruby -e 'sentence = "Th1s 1s a sampl3 s3nt3nc3."; puts sentence.gsub(/[0123456789]/, "!"); puts sentence.gsub(/[0-9]/, "!")' 
-    - run: ruby -e 'cool_phrase = "slow lorises are cool"; puts cool_phrase.gsub(/\w+/) {|word| word.capitalize}'
+    - run: ruby -e 'cool_phrase = "slow lorises are cool"; puts cool_phrase.gsub() {|word| word.capitalize}'
     - run: ruby -e 'steve = "St97eve Brul()*)e "; puts steve.gsub(/[\W\d]/, "").split(/(?=[A-Z])/).join(" ")'
