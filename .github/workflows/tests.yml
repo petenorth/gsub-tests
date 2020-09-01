@@ -16,5 +16,5 @@ jobs:
         ruby-version: ${{ matrix.ruby }}
     - run: ruby -e 'sentence = "This is a sample sentence."; puts sentence.gsub(/a/, "")'
     - run: ruby -e 'sentence = "Th1s 1s a sampl3 s3nt3nc3."; puts sentence.gsub(/[0123456789]/, "!"); puts sentence.gsub(/[0-9]/, "!")' 
-    - run: ruby -e 'puts "Apollo 12".gsub(/(\d+)/, 'i') { Regexp.last_match[1].to_i.next }'
+    - run: ruby -e 'puts "Apollo 12".gsub(/(\d+)/, "i") { Regexp.last_match[1].to_i.next }'
     - run: ruby -e 'steve = "St97eve Brul()*)e "; puts steve.gsub(/[\W\d]/, "").split(/(?=[A-Z])/).join(" ")'
