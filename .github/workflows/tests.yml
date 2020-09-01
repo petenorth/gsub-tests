@@ -14,4 +14,5 @@ jobs:
     - uses: ruby/setup-ruby@v1
       with:
         ruby-version: ${{ matrix.ruby }}
-    - run: ruby -e 'sentence = "This is a sample sentence."; puts sentence.gsub(/a/, "")' 
+    - run: ruby -e 'sentence = "This is a sample sentence."; puts sentence.gsub(/a/, "")'
+    - run: ruby -e 'sentence = "sentence = "Th1s 1s a sampl3 s3nt3nc3."; puts sentence.gsub(/[0123456789]/, "!"); puts sentence.gsub(/[0-9]/, "!")' 
