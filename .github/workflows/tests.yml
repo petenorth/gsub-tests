@@ -26,5 +26,6 @@ jobs:
     - run: rails generate cucumber:install
       working-directory: ./cucumber_bdd_how_to
     - run: mv hello_world.feature cucumber_bdd_how_to/features
+    - run: mv hello_world_steps.rb cucumber_bdd_how_to/step_definitions
     - run: bundle exec cucumber features/hello_world.feature
       working-directory: ./cucumber_bdd_how_to
