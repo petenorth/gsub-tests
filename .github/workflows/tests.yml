@@ -19,8 +19,12 @@ jobs:
     - run: gem install rails
     - run: rails new cucumber_bdd_how_to
     - run: cat Gemfile
-    - run: mv Gemfile.example Gemfile
+      working-directory: ./cucumber_bdd_how_to
+    - run: mv Gemfile.example cucumber_bdd_how_to/Gemfile
     - run: bundler install
+      working-directory: ./cucumber_bdd_how_to
     - run: rails generate cucumber:install
-    - run: mv hello_world.feature features
+      working-directory: ./cucumber_bdd_how_to
+    - run: mv hello_world.feature cucumber_bdd_how_to/features
     - run: bundle exec cucumber features/hello_world.feature
+      working-directory: ./cucumber_bdd_how_to
