@@ -14,6 +14,8 @@ jobs:
     - uses: ruby/setup-ruby@v1
       with:
         ruby-version: ${{ matrix.ruby }}
+    - run: sudo apt-get update
+    - run: sudo apt-get install libsqlite3-dev libxml2-dev libxslt-dev
     - run: gem install rails
     - run: rails new cucumber_bdd_how_to
     - run: mv Gemfile.example Gemfile
