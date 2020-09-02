@@ -18,6 +18,7 @@ jobs:
     - run: sudo apt-get install libsqlite3-dev libxml2-dev libxslt-dev
     - run: gem install rails
     - run: rails new cucumber_bdd_how_to
+    - run: cat Gemfile
     - run: mv Gemfile.example Gemfile
     - run: bundler install
     - run: rails generate cucumber:install
