@@ -51,8 +51,6 @@ ActionController::Base.allow_rescue = false
 
 # Browser configuration
 
-Capybara.app_host = 'http://en.wikipedia.org'
-Capybara.run_server = false # don't start Rack
 Capybara.server = :puma, { Silent: true }
 
 if ENV['APP_URL'].present?
