@@ -28,5 +28,7 @@ jobs:
     - run: mv hello_world.feature cucumber_bdd_how_to/features
     - run: mv hello_world_steps.rb cucumber_bdd_how_to/features/step_definitions
     - run: mv path_helper.rb cucumber_bdd_how_to/features/support
-    - run: RUBYOPT='--experimental-options --engine.Mode=latency --engine.CompilerThreads=-1' bundle exec cucumber features/hello_world.feature
+    - run: mv env.rb cucumber_bdd_how_to/features/support
+    - run: rm cucumber_bdd_how_to/.ruby-version 
+    - run: RUBYOPT='--experimental-options --engine.Mode=latency' bundle exec cucumber features/hello_world.feature
       working-directory: ./cucumber_bdd_how_to
