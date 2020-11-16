@@ -30,5 +30,9 @@ jobs:
     - run: mv path_helper.rb cucumber_bdd_how_to/features/support
     - run: mv env.rb cucumber_bdd_how_to/features/support
     - run: rm cucumber_bdd_how_to/.ruby-version 
-    - run: RUBYOPT='--experimental-options --engine.Mode=latency' bundle exec cucumber features/hello_world.feature
+    - name: set RUBYOPT for truffleruby
+      if: matrix.ruby == 'truffleruby-head' || matrix.ruby == 'truffleruby'
+      run : |
+        RUBYOPT=--experimental-options\ --engine.Mode=latency
+    - run: bundle exec cucumber features/hello_world.feature
       working-directory: ./cucumber_bdd_how_to
