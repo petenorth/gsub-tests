@@ -17,5 +17,5 @@ jobs:
     - run: ruby test_gsub.rb 
     - run: sudo apt-get install libsqlite3-dev libxml2-dev libxslt-dev
     - run: gem install selenium-webdriver -v 3.142.7
-    - run: gem webdrivers -v 4.2.0
+    - run: gem install webdrivers -v 4.2.0
     - run: ruby capabilities.rb
