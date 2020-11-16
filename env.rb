@@ -6,7 +6,7 @@
 
 require 'cucumber/rails'
 require 'selenium/webdriver'
-require 'capybara-screenshot/cucumber'
+#require 'capybara-screenshot/cucumber'
 
 # Capybara defaults to CSS3 selectors rather than XPath.
 # If you'd prefer to use XPath, just uncomment this line and adjust any
@@ -28,7 +28,7 @@ require 'capybara-screenshot/cucumber'
 # 2) Set the value below to true. Beware that doing this globally is not
 # recommended as it will mask a lot of errors for you!
 #
-ActionController::Base.allow_rescue = false
+#ActionController::Base.allow_rescue = false
 
 # You may also want to configure DatabaseCleaner to use different strategies for certain features and scenarios.
 # See the DatabaseCleaner documentation for details. Example:
