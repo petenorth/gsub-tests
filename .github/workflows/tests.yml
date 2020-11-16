@@ -15,5 +15,6 @@ jobs:
       with:
         ruby-version: ${{ matrix.ruby }}
     - run: ruby test_gsub.rb 
+    - run: sudo apt-get install libsqlite3-dev libxml2-dev libxslt-dev
     - run: gem install capybara -v 2.7.1
     - run: ruby capabilities.rb
