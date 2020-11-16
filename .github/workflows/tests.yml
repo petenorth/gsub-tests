@@ -15,3 +15,5 @@ jobs:
       with:
         ruby-version: ${{ matrix.ruby }}
     - run: ruby test_gsub.rb 
+    - run: gem install capybara -v 2.7.1
+    - run: ruby capabilities.rb
