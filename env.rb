@@ -6,7 +6,6 @@
 
 require 'cucumber/rails'
 require 'selenium/webdriver'
-require 'capybara-screenshot/cucumber'
 require 'cucumber/rspec/doubles'
 
 # Capybara defaults to CSS3 selectors rather than XPath.
