@@ -37,5 +37,5 @@ jobs:
         CUC_DRIVER=chrome
         APP_URL='http://en.wikipedia.org'
         SELENIUM_HUB_HOSTNAME=selenium-chrome
-    - run: bundle exec cucumber features/hello_world.feature
+    - run: CUC_DRIVER=chrome APP_URL='http://en.wikipedia.org' SELENIUM_HUB_HOSTNAME=selenium-chrome bundle exec cucumber features/hello_world.feature
       working-directory: ./cucumber_bdd_how_to
