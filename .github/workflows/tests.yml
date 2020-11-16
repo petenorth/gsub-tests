@@ -17,4 +17,4 @@ jobs:
     - run: ruby test_gsub.rb 
     - run: sudo apt-get install libsqlite3-dev libxml2-dev libxslt-dev
     - run: bundle install
-    - run: ruby capabilities.rb
+    - run: ruby env.rb
