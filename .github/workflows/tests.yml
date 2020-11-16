@@ -14,7 +14,19 @@ jobs:
     - uses: ruby/setup-ruby@v1
       with:
         ruby-version: ${{ matrix.ruby }}
-    - run: ruby test_gsub.rb 
+    - run: sudo apt-get update
     - run: sudo apt-get install libsqlite3-dev libxml2-dev libxslt-dev
-    - run: bundle install
-    - run: ruby env.rb
+    - run: gem install rails
+    - run: rails new cucumber_bdd_how_to
+    - run: cat Gemfile
+      working-directory: ./cucumber_bdd_how_to
+    - run: mv Gemfile.example cucumber_bdd_how_to/Gemfile
+    - run: bundler install
+      working-directory: ./cucumber_bdd_how_to
+    - run: rails generate cucumber:install
+      working-directory: ./cucumber_bdd_how_to
+    - run: mv hello_world.feature cucumber_bdd_how_to/features
+    - run: mv hello_world_steps.rb cucumber_bdd_how_to/features/step_definitions
+    - run: mv path_helper.rb cucumber_bdd_how_to/features/support
+    - run: RUBYOPT='--experimental-options --engine.Mode=latency --engine.CompilerThreads=-1' bundle exec cucumber features/hello_world.feature
+      working-directory: ./cucumber_bdd_how_to
