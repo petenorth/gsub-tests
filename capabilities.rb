@@ -1,4 +1,5 @@
-require 'selenium/webdriver'
+require 'cucumber/rails'
+require 'selenium/webdriver' 
 
 Capybara.register_driver :chrome do |app|
   capabilities = Selenium::WebDriver::Remote::Capabilities.chrome(

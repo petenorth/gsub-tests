@@ -19,4 +19,5 @@ jobs:
     - run: gem install selenium-webdriver -v 3.142.7
     - run: gem install webdrivers -v 4.2.0
     - run: gem install capybara -v 3.31.0
+    - run: gem install cucumber-rails -v 2.0.0
     - run: ruby capabilities.rb
