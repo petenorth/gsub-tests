@@ -34,5 +34,6 @@ jobs:
       if: matrix.ruby == 'truffleruby-head' || matrix.ruby == 'truffleruby'
       run : |
         RUBYOPT=--experimental-options\ --engine.Mode=latency
+        CUC_DRIVER=chrome
     - run: bundle exec cucumber features/hello_world.feature
       working-directory: ./cucumber_bdd_how_to
